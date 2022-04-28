@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noise Effect Background - DEMO by @munozrc</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, main {
+      width: 100%;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d0d0d;
+    }
+
+    main::before {
+      content: "";
+      position: fixed;
+      height: 300%;
+      width: 300%;
+      top: -100%;
+      left: -50%;
+      background-image: url(./noise.png);
+      animation: grain 8s steps(10) infinite;
+      opacity: 0.6;
+    }
+
+    h1 {
+      max-width: 1000px;
+      color: #FAFAFA;
+      font-size: 3em;
+      margin: 0 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @keyframes grain {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      10% {
+        transform: translate(-5%, -10%);
+      }
+
+      20% {
+        transform: translate(-15%, 5%);
+      }
+
+      30% {
+        transform: translate(7%, -25%);
+      }
+
+      40% {
+        transform: translate(-5%, 25%);
+      }
+
+      50% {
+        transform: translate(-15%, 10%);
+      }
+
+      60% {
+        transform: translate(15%, 0%);
+      }
+
+      70% {
+        transform: translate(0%, 15%);
+      }
+
+      80% {
+        transform: translate(3%, 35%);
+      }
+
+      90% {
+        transform: translate(-10%, 10%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Noise Effect Background</h1>
+  </main>
+</body>
+</html>
